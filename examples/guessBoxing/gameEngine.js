@@ -31,5 +31,6 @@ function getComputerAction() {
   } else {
     computerAction = "布";
   }
+
   return computerAction;
 }
