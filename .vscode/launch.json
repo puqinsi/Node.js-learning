@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "启动程序",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/examples/guessBoxing2/index.js"
+      "program": "${workspaceFolder}/examples/guessBoxing4.0/index.js"
     }
   ]
 }

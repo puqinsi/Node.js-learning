@@ -50,11 +50,10 @@
           const action = e.target.innerText;
           fetch(`http://${location.host}/game?action=${action}`)
             .then(res => {
-              console.log(res);
-              res.text();
+              return res.text();
             })
             .then(text => {
-              output.innerHTML = text + "<br/>";
+              output.innerHTML += text + "<br/>";
             });
         },
         false
