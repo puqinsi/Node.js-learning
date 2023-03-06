@@ -1,3 +1,4 @@
+/* 使用 vm 编译字符串模板 */
 const vm = require("vm");
 
 const templateMap = {
