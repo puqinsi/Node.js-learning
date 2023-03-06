@@ -1,5 +1,5 @@
 {
-  "name": "geek-detail",
+  "name": "detail-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "puqinsi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "net": "^1.0.2",
+    "protocol-buffers": "^5.0.0"
+  }
 }
