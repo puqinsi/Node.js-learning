@@ -11,6 +11,6 @@ examples:
 
 Project:
 
-- [x] 下载页
-- [x] 详情页
-- [ ] 播放页
+- [x] 下载页：HTTP 服务-koa
+- [x] 详情页：HTTP 服务-koa 和 RPC 服务-net
+- [x] 播放页：HTTP 服务-koa 和 HTTP API 服务-graphql

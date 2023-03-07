@@ -1,5 +1,9 @@
 const EasySock = require("easy_sock");
-const { columnRequest, columnResponse } = require("../common/schema");
+const protoBuf = require("protocol-buffers");
+const fs = require("fs");
+
+const schemas = protoBuf(fs.readFileSync("../common/detail.proto"));
+const { ColumnRequest, ColumnResponse } = schemas;
 
 const easySock = new EasySock({
   ip: "127.0.0.1",
@@ -10,7 +14,7 @@ const easySock = new EasySock({
 
 // TODO Buffer 长度可以抽成常量
 easySock.encode = (data, seq) => {
-  const body = columnRequest.encode(data);
+  const body = ColumnRequest.encode(data);
   const head = Buffer.alloc(8);
   head.writeInt32BE(seq);
   head.writeInt32BE(body.length, 4);
@@ -24,7 +28,7 @@ easySock.decode = function (buffer) {
 
   return {
     seq,
-    result: columnResponse.decode(body)
+    result: ColumnResponse.decode(body)
   };
 };
 

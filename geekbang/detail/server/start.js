@@ -1,9 +1,13 @@
 const columnData = require("./mockdata/column");
-const { columnRequest, columnResponse } = require("../common/schema");
+const protoBuf = require("protocol-buffers");
+const fs = require("fs");
+
+const schemas = protoBuf(fs.readFileSync("../common/detail.proto"));
+const { ColumnRequest, ColumnResponse } = schemas;
 
 const server = require("./lib/geeknode-rpc-server")(
-  columnRequest,
-  columnResponse
+  ColumnRequest,
+  ColumnResponse
 );
 
 server
