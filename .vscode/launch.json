@@ -31,6 +31,13 @@
       "name": "调试列表页",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/geekbang/list/server.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "调试 cluster",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/examples/cluster/index.js"
     }
   ]
 }
