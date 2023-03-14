@@ -3,11 +3,7 @@ const parentProcess = require("./master");
 const childProcess = require("./child");
 
 if (cluster.isMaster) {
-  parentProcess(cluster.fork);
-
-  cluster.on("exit", () => {
-    console.log("parent: exit");
-  });
+  parentProcess(cluster);
 } else {
   childProcess();
 }
