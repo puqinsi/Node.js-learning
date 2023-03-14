@@ -2,7 +2,17 @@
 
 **Node.js 学习**
 
-examples:
+模块案例：
+
+- HTTP
+- Buffer
+- net
+- vm
+- GraphQL
+- child_process
+- cluster
+
+游戏案例：
 
 - guessBoxing1.0
 - guessBoxing2.0 - HTTP

@@ -10,10 +10,11 @@ app.use(mount("/static", static(`${__dirname}/source/static`)));
 
 app.use(mount("/api", graphqlHTTP({ schema: require("./schema") })));
 
+const body = fs.readFileSync(`${__dirname}/source/index.html`, "utf-8");
 app.use(
   mount("/", async ctx => {
     ctx.status = 200;
-    ctx.body = fs.readFileSync(`${__dirname}/source/index.html`, "utf-8");
+    ctx.body = body;
   })
 );
 
