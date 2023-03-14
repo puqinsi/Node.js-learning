@@ -7,6 +7,8 @@ module.exports = http
     });
 
     res.end("hello world");
+    // 使进程无响应
+    // while (true) {}
   })
   .listen(3000, () => {
     console.log("listen at http://localhost:3000");
